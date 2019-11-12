@@ -12,6 +12,7 @@ public class User {
 	private String password;
 	private double totalCalorieIntake;
 	private HashMap<String,Meal> favMeals = new HashMap();
+	private HashMap<String,WorkOut> favWorkOuts = new HashMap();
 	private BodyGoalType goal;
 	private List<String> foodRestrictions = new ArrayList<String>();
 	private float weightGoal;
@@ -26,6 +27,14 @@ public class User {
 	public User(String username, String password) {
 		setUsername(username);
 		setPassword(password);
+	}
+	
+	public HashMap<String,Meal> determineMeals() {
+		return null;
+	}
+	
+	public HashMap<String,WorkOut> determineWorkOuts(){
+		return null;
 	}
 	
 	public void setFoodRestriction(String name) {
