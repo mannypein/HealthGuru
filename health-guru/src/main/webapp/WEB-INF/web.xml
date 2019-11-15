@@ -4,4 +4,34 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>SignUp</servlet-name>
+  	<display-name>SignUp</display-name>
+  	<description></description>
+  	<servlet-class>servlets.SignUp</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>userSignUpController</servlet-name>
+  	<display-name>userSignUpController</display-name>
+  	<description></description>
+  	<servlet-class>servlets.userSignUpController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>loginController</servlet-name>
+  	<display-name>loginController</display-name>
+  	<description></description>
+  	<servlet-class>servlets.loginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SignUp</servlet-name>
+  	<url-pattern>/SignUp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>userSignUpController</servlet-name>
+  	<url-pattern>/userSignUpController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>loginController</servlet-name>
+  	<url-pattern>/loginController</url-pattern>
+  </servlet-mapping>
 </web-app>
