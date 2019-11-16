@@ -3,6 +3,7 @@ package controllers;
 import java.util.ArrayList;
 import java.util.List;
 
+import enums.BodyGoalType;
 import models.User;
 import models.WorkOut;
 
@@ -11,7 +12,16 @@ public class WorkoutManager {
 	private User user;
 	private List<WorkOut> workOuts = new ArrayList();
 	
-	public List<WorkOut> generateWorkOuts(User user){
+	public List<WorkOut> generateWorkOuts(User user) {
+		if(user.getGoal().equals(BodyGoalType.BULKING)) {
+			//Exercises that would bulk up.
+		} else if(user.getGoal().equals(BodyGoalType.SLIMMING)) {
+			//Exercises that would slim down.
+		} else if(user.getGoal().equals(BodyGoalType.TONING)) {
+			//Exercises that would tone.
+		} else {
+			
+		}
 		return null;
 	}
 	

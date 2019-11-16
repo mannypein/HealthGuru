@@ -1,10 +1,11 @@
 package models;
 
+import enums.ExerciseType;
 import enums.WorkOutType;
 
 public class WorkOut {
 
-	private String name;
+	private ExerciseType name;
 	private long duration;
 	private WorkOutType type;
 	private int sets;
@@ -13,17 +14,17 @@ public class WorkOut {
 		
 	}
 	
-	public WorkOut(String name, long duration, WorkOutType type, int sets) {
+	public WorkOut(ExerciseType name, long duration, WorkOutType type, int sets) {
 		setName(name);
 		setDuration(duration);
 		setType(type);
 		setSets(sets);
 	}
 	
-	public String getName() {
+	public ExerciseType getName() {
 		return name;
 	}
-	public void setName(String name) {
+	public void setName(ExerciseType name) {
 		this.name = name;
 	}
 	public long getDuration() {
