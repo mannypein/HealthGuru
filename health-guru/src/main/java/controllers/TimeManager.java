@@ -17,8 +17,13 @@ public class TimeManager {
 		}
 	}
 	
-	public void seeSchedule() {
-		
+	public String seeSchedule() {
+		String schedule = "";
+		for(String s : userAvailability.keySet()) {
+			schedule += s + ": ";
+			schedule += userAvailability.get(s);
+		}
+		return schedule;
 	}
 
 	public User getUser() {
@@ -46,11 +51,8 @@ public class TimeManager {
 	}
 
 	public String getHoursAvailable() {
+		hoursAvailable = userAvailability.get(currentDay);
 		return hoursAvailable;
-	}
-
-	public void setHoursAvailable(String hoursAvailable) {
-		this.hoursAvailable = hoursAvailable;
 	}
 	
 }
