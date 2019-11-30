@@ -15,6 +15,7 @@ public class WorkoutManager {
 	private List<WorkOut> workOuts = new ArrayList<>();
 	
 	public List<WorkOut> generateWorkOuts(User user) {
+		workOuts.clear();
 		if(user.getGoal().equals(BodyGoalType.BULKING)) {
 			//Exercises that would bulk up.
 			workOuts.add(new WorkOut(ExerciseType.DEADLIFT, 4, WorkOutType.BULKING, 10));
