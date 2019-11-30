@@ -18,7 +18,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 public class loginController extends HttpServlet {
-	private Map<String, String> users = new HashMap();
+	private Map<String, String> users = new HashMap<>();
 
 	private static final long serialVersionUID = 1L;
 

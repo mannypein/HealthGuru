@@ -5,20 +5,22 @@ import java.util.HashMap;
 import java.util.List;
 
 import enums.BodyGoalType;
+import enums.Diet;
 
 public class User {
 
 	private String username;
 	private String password;
 	private double totalCalorieIntake;
-	private HashMap<String,Meal> favMeals = new HashMap();
-	private HashMap<String,WorkOut> favWorkOuts = new HashMap();
+	private HashMap<String,Meal> favMeals = new HashMap<>();
+	private HashMap<String,WorkOut> favWorkOuts = new HashMap<>();
 	private BodyGoalType goal;
 	private List<String> foodRestrictions = new ArrayList<String>();
 	private float weightGoal;
 	private float startingWeight;
 	private float currentWeight;
 	private float height;
+	private Diet diet;
 	
 	public User() {
 		
@@ -87,6 +89,14 @@ public class User {
 	}
 	public void setHeight(float height) {
 		this.height = height;
+	}
+
+	public Diet getDiet() {
+		return diet;
+	}
+
+	public void setDiet(Diet diet) {
+		this.diet = diet;
 	}
 	
 	

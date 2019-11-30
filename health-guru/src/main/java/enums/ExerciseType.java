@@ -3,13 +3,15 @@ package enums;
 public enum ExerciseType {
 	LUNGE,
 	PUSHUP,
+	DIAMONDPUSHUP,
 	SQUAT,
-	OVERHEAD,
-	ROWS,
+	DIP,
 	DEADLIFT,
 	BURPEE,
-	SIDEPLANK,
+	WEIGHTEDSITUP,
 	SITUP,
-	GLUTEBRIDGE,
-	JUMPINGJACK
+	JUMPINGJACK,
+	BENCHPRESS,
+	RUNNING, 
+	WEIGHTEDPULLUP //Weight on your legs and you pull up.
 }
