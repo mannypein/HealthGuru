@@ -7,7 +7,7 @@ public class Meal {
 
 	private String name;
 	private double calorieCount;
-	private HashMap<String,Ingredient> ingredients = new HashMap();
+	private HashMap<String,Ingredient> ingredients = new HashMap<>();
 	
 	public String getName() {
 		return name;
