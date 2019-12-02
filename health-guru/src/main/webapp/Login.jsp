@@ -3,21 +3,32 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href='Testing.css' rel='stylesheet' />
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>
-	<div class="container">
-        <form id='form' method='get' action='/create'>
-            <label for='username'> Username: </label>
-                <input type='text' name='username'/>
-                <br/>
-            <label for='password'> Password:</label>
-                <input type='password' name='password'/>
-                <br/>
-            <input type='submit' value='Login'></input>
-            <input type='button' value='Create Account'>
-        </form>
-    </div>
+	<div class="container-form">
+		<form id='form' method='post' action='/create'>
+			<div class='form-group'>
+				<input type='text', name='username' autocomplete="off" required="required"/>
+				<label for='username' class="control-label"> Username: </label>
+				<i class="bar"></i>
+				<br />
+			</div>
+			<div class='form-group'>
+				<input type='password', name='password' autocomplete="off" required="required"/>
+				<label for='password' class="control-label"> Password:</label>
+				<i class="bar"></i>
+				<br />
+			</div>
+			<div class="button-container" id="button-container">
+				<input type='submit' value='Login' class="button"></input>			
+			</div>
+		</form>
+			<div class="button-container" id="button-container">
+				<input type='submit' value='Create Account' class="button" onclick="location.href = 'http://localhost:8080/guru/Create.jsp'"></input>
+			</div>
+	</div>
 </body>
 </html>
