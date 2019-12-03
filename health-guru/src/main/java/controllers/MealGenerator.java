@@ -1,8 +1,12 @@
 package controllers;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import models.Ingredient;
 import models.Meal;
@@ -52,8 +56,13 @@ public class MealGenerator {
 		urlToGenerate += "=" + apiKey;
 		
 		//Call the get method somehow. 
-		
+		Document doc = null;
+		try {
+			doc = Jsoup.connect("http://en.wikipedia.org/").get();
+		} catch (IOException e) {}
+		System.out.println(doc);
 		//Create and return list of meals
+		
 		
 		return getMeals();
 	}
