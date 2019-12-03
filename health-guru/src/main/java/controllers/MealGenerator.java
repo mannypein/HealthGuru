@@ -1,12 +1,8 @@
 package controllers;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 
 import models.Ingredient;
 import models.Meal;
@@ -16,15 +12,29 @@ public class MealGenerator {
 	private Map<String, Meal> meals;
 	private int userID;
 	private List<String> dietaryRestrictions = new ArrayList<String>();
-	private String apiKey = "99a6e2a6198f49a4ad1e63353a23acf1";
+	private String apiKey = "&apiKey=83ba08bd7814422383e8ba71074270ee";
 	
-	public Map<String, Meal> generateMeals(User user, List<Ingredient> ingredients, int maxCalories) {
+	public static void main(String[] args) {
+		User u = new User();
+		List<Ingredient> ingredients = new ArrayList<>();
+		Ingredient i = new Ingredient();
+		i.setName("apple");
+		ingredients.add(i);
+		
+		MealGenerator mg = new MealGenerator();
+		String generate = mg.generateMeals(u, ingredients, 0);
+	}
+	
+	public String generateMeals(User user, List<Ingredient> ingredients, int maxCalories) {
 		//call the API to generate meal
 		String urlToGenerate = "https://api.spoonacular.com/recipes/complexSearch?includeIngredients=";
 		//Ingredients
 		for(Ingredient i : ingredients) {
 			if(i == ingredients.get(0)) {
-				urlToGenerate += ingredients.get(0) + ",";
+				urlToGenerate += ingredients.get(0).getName();
+				if(ingredients.size() > 1) {
+					urlToGenerate += ",";
+				}
 			} else {
 				urlToGenerate += "+" + i.toString() + ",";
 			}
@@ -53,18 +63,12 @@ public class MealGenerator {
 		}
 		
 		//Final String for call to API
-		urlToGenerate += "=" + apiKey;
+		urlToGenerate += apiKey;
 		
-		//Call the get method somehow. 
-		Document doc = null;
-		try {
-			doc = Jsoup.connect("http://en.wikipedia.org/").get();
-		} catch (IOException e) {}
-		System.out.println(doc);
 		//Create and return list of meals
 		
 		
-		return getMeals();
+		return urlToGenerate;
 	}
 	
 	public Meal getMeal(String name) {
