@@ -1,43 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<link href='Testing.css' rel='stylesheet' />
 <meta charset="ISO-8859-1">
-<title>Create</title>
+<title>Insert title here</title>
 </head>
 <body>
-	<div class="container-form">
-		<form id='form' method='post' action='/create'>
-			<div class='form-group'>
-				<input type='text', name='username' autocomplete="off" required="required"/>
-				<label for='username' class="control-label"> Username: </label>
-				<i class="bar"></i>
-				<br />
-			</div>
-			<div class='form-group'>
-				<input type='password', name='password' autocomplete="off" required="required"/>
-				<label for='password' class="control-label"> Password:</label>
-				<i class="bar"></i>
-				<br />
-			</div>
-			<div class='form-group'>
-				<input type='password', name='confirmPassword' autocomplete="off" required="required"/> 
-				<label for='confirmPassword' class="control-label"> Confirm Password:</label> 
-				<i class="bar"></i>
-				<br />
-			</div>
-			<div class='form-group'>
-				<input type='text', name='email' autocomplete="off" required="required"/>
-				<label for='email' class="control-label"> Email: </label> 
-				<i class="bar"></i>
-				<br />
-			</div>
-			<div class="button-container">
-				<input type='submit' value='Create' class="button"></input>
-			</div>
-		</form>
-	</div>
+	<div class="container">
+        <form id='form' method='post' action='/create'>
+            <label for='username'> Username: </label>
+                <input type='text' name='username'/>
+                <br/>
+            <label for='password'> Password:</label>
+                <input type='password' name='password'/>
+                <br/>
+            <label for='confirmPassword'> Confirm Password:</label>
+                <input type='password' name='confirmPassword'/>
+                <br/>
+            <label for='email'> Email: </label>
+              	<input type='text' name='email'/>
+               	<br/>
+            <input type='submit' value='Create'></input>
+        </form>
+    </div>
 </body>
 </html>

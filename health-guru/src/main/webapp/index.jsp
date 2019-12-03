@@ -8,9 +8,7 @@
 <title>Insert title here</title>
 </head>
 <header>
-<div id='login' class='header1'>
-<input type='submit' value='Login' class="button" onclick="location.href = 'http://localhost:8080/guru/Login.jsp'"></input>
-</div>
+<div id='login' class='header1'>LOGIN</div>
 <div class='header2'>WORKOUTS</div>
 <div class='header3'>WEIGHT TRACKER</div>
 <div class='header4'>MEAL GENERATOR</div>

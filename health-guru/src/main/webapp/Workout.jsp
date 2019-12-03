@@ -3,31 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href='Testing.css' rel='stylesheet' />
 <meta charset="ISO-8859-1">
-<title>Workouts</title>
+<title>Insert title here</title>
 </head>
 <body>
-<div class='sunday'>
-	Sunday
-</div>
-<div class='Monday'>
-	Monday
-</div>
-<div class='Tuesday'>
-	Tuesday
-</div>
-<div class='Wednesday'>
-	Wednesday
-</div>
-<div class='Thursday'>
-	Thursday
-</div>
-<div class='Friday'>
-	Friday
-</div>
-<div class='Saturday'>
-	Saturday
-</div>
+
 </body>
 </html>
