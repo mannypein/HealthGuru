@@ -9,12 +9,14 @@
 </head>
 <header>
 <div id='login' class='header1'>
-<input type='submit' value='Login' class="button" onclick="location.href = 'http://localhost:8080/guru/Login.jsp'"></input>
+<input type='submit' value='Login' onclick="location.href = 'http://localhost:8080/guru/Login.jsp'"></input>
 </div>
-<div class='header2'>WORKOUTS</div>
-<div class='header3'>WEIGHT TRACKER</div>
-<div class='header4'>MEAL GENERATOR</div>
-<div class='header5'>MEAL SUGGESTIONS</div>
+<div class='header2'>
+<input type='submit' value='Workout' onclick="location.href = 'http://localhost:8080/guru/Workout.jsp'"></input>
+</div>
+<div class='header3'>
+<input type='submit' value='Meals' onclick="location.href = 'http://localhost:8080/guru/Meals.jsp'"></input>
+</div>
 </header>
 <body>
 <!-- Slideshow container -->
@@ -36,6 +38,17 @@
     <img class="picture3" src="./pictures/weightLoss.jpg" >
   </div>
 </div>
+
+<div class='healthy'>
+Health is good
+</div>
+
+<div class='healthfoods'>
+	<img class='omlette_pic' src="./pictures/omlette.jpg">
+	<img class='soup_img' src='./pictures/soup.jpg'>
+	<img class='spag_img' src='./pictures/spag.jpg'>
+</div>
+
 <br>
 <script src='javascript.js'></script>
 </body>
