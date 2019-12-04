@@ -12,7 +12,7 @@ public class MealGenerator {
 	private Map<String, Meal> meals;
 	private int userID;
 	private List<String> dietaryRestrictions = new ArrayList<String>();
-	private String apiKey = "&apiKey=83ba08bd7814422383e8ba71074270ee";
+	private String apiKey = "&apiKey=99a6e2a6198f49a4ad1e63353a23acf1";
 
 	public static void main(String[] args) {
 		User u = new User();
@@ -65,6 +65,8 @@ public class MealGenerator {
 		if (maxCalories != 0) {
 			urlToGenerate += "&maxCalories=" + maxCalories;
 		}
+		
+		urlToGenerate += "&number=4";
 
 		// Final String for call to API
 		urlToGenerate += "&" +apiKey;
