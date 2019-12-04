@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div class="container">
-        <form id='form' method='post' action='/create'>
+        <form id='form' method='POST' action='/guru/signup'>
             <label for='username'> Username: </label>
                 <input type='text' name='username'/>
                 <br/>
