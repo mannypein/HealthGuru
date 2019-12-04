@@ -4,5 +4,6 @@ public enum WorkOutType {
 
 	TONING,
 	BULKING,
-	CONDITIONG
+	SLIMMING,
+	NONE
 }

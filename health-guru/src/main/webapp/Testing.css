@@ -43,6 +43,7 @@ header {
 .pagename {
 	text-align: center;
 }
+
 .sunday {
 	text-align: center;
 	position: relative;
@@ -137,6 +138,42 @@ header {
 	left: 1020px;
 	background: #fff;
 	
+.header5 {
+	position:absolute;
+    transition: .5s ease;
+    top: 25px;
+    left: 1207px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 4px 0 0;
+    padding: 5px;
+    background-color: #cbcbcb;
+    display: inline-block;
+}
+
+.picture1 {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  box-shadow: 10px 10px grey;
+}
+.picture2 {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-shadow: 10px 10px grey;
+}
+.picture3 {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-shadow: 10px 10px grey;
+}
+img {
+  opacity: 0.8;
 }
 
 /* Slideshow container */

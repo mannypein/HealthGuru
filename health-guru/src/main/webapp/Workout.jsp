@@ -3,9 +3,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href='Testing.css' rel='stylesheet' />
 <meta charset="ISO-8859-1">
-<title>Workouts</title>
+<title>Insert title here</title>
 </head>
 <header>
 <div id='login' class='header1'>
