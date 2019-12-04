@@ -1,138 +1,142 @@
 header {
     background: #72d52a;
     height: 60px;
+    margin: -7px;
+    border-radius: 2px;
 }
 .header1 {
 	position:absolute;
     transition: .5s ease;
-    top: 25px;
-    left: 705px;
-    border-radius: 3px;
+    top: 15px;
+    left: 1125px;
+    border-radius: 6px;
     cursor: pointer;
     margin: 0 4px 0 0;
-    padding: 5px;
+    padding: 7.5px;
     background-color: #cbcbcb;
     display: inline-block;
 }
 .header2 {
 	position:absolute;
     transition: .5s ease;
-    top: 25px;
-    left: 775px;
-    border-radius: 3px;
+    top: 15px;
+    left: 1205px;
+    border-radius: 6px;
     cursor: pointer;
     margin: 0 4px 0 0;
-    padding: 5px;
+    padding: 7.5px;
     background-color: #cbcbcb;
     display: inline-block;
 }
 .header3 {
 	position:absolute;
     transition: .5s ease;
-    top: 25px;
-    left: 885px;
-    border-radius: 3px;
+    top: 15px;
+    left: 1300px;
+    border-radius: 6px;
     cursor: pointer;
     margin: 0 4px 0 0;
-    padding: 5px;
+    padding: 7.5px;
     background-color: #cbcbcb;
     display: inline-block;
 }
-.header4 {
-	position:absolute;
-    transition: .5s ease;
-    top: 25px;
-    left: 1045px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin: 0 4px 0 0;
-    padding: 5px;
-    background-color: #cbcbcb;
-    display: inline-block;
+.pagename {
+	text-align: center;
 }
-.header5 {
-	position:absolute;
-    transition: .5s ease;
-    top: 25px;
-    left: 1207px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin: 0 4px 0 0;
-    padding: 5px;
-    background-color: #cbcbcb;
-    display: inline-block;
-}
-
-.omlette_pic {
-	display: block;
-	width: 50%;
-}
-.picture1 {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 85%;
-  box-shadow: 10px 10px grey;
-}
-.picture2 {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  box-shadow: 10px 10px grey;
-}
-.picture3 {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  box-shadow: 10px 10px grey;
-}
-img {
-  opacity: 0.8;
-}
-
 .sunday {
+	text-align: center;
 	position: relative;
 	border-color: #000;
 	border: 2px solid black;
 	border-width: 1px;
+	margin: 25px;
+	width: 150px;
+	height: 150px;
+	background: #fff;
 }
 .Monday {
+	text-align: center;
 	position: relative;
 	border-color: #000;
 	border: 2px solid black;
 	border-width: 1px;
+	margin: 25px;
+	width: 150px;
+	height: 150px;
+	top: -178px;
+	left: 170px;
+	background: #fff;
+	
 }
 .Tuesday {
+	text-align: center;
 	position: relative;
 	border-color: #000;
 	border: 2px solid black;
 	border-width: 1px;
+	margin: 25px;
+	width: 150px;
+	height: 150px;
+	top: -356px;
+	left: 340px;
+	background: #fff;
+	
 }
 .Wednesday {
+	text-align: center;
 	position: relative;
 	border-color: #000;
 	border: 2px solid black;
 	border-width: 1px;
+	margin: 25px;
+	width: 150px;
+	height: 150px;
+	top: -534px;
+	left: 510px;
+	background: #fff;
+	
 }
 .Thursday {
+	text-align: center;
 	position: relative;
 	border-color: #000;
 	border: 2px solid black;
 	border-width: 1px;
+	margin: 25px;
+	width: 150px;
+	height: 150px;
+	top: -712px;
+	left: 680px;
+	background: #fff;
+	
 }
 .Friday {
+	text-align: center;
 	position: relative;
 	border-color: #000;
 	border: 2px solid black;
 	border-width: 1px;
+	margin: 25px;
+	width: 150px;
+	height: 150px;
+	top: -890px;
+	left: 850px;
+	background: #fff;
+	
 }
 .Saturday {
+	text-align: center;
 	position: relative;
 	border-color: #000;
 	border: 2px solid black;
 	border-width: 1px;
+	margin: 25px;
+	width: 150px;
+	height: 150px;
+	top: -1068px;
+	left: 1020px;
+	background: #fff;
+	
 }
 
 /* Slideshow container */
@@ -145,6 +149,9 @@ img {
 /* Hide the images by default */
 .mySlides {
   display: none;
+}
+html {
+	background-color: #aadd77;
 }
 
 /* Next & previous buttons */
@@ -287,7 +294,7 @@ img {
     position: relative;
     max-width: 40rem;
     margin: 5rem auto;
-    background: #fff;
+    background: #77ddaa;
     width: 100%;
     padding: 3rem 5rem 0;
     border-radius: 1px;
@@ -322,6 +329,7 @@ img {
     margin-bottom: 2.25rem;
 }
 
+
 .form-inline > .form-group,
 .form-inline > .btn {
     display: inline-block;
@@ -353,7 +361,7 @@ img {
     pointer-events: none;
     padding-left: 0.125rem;
     z-index: 1;
-    color: #b3b3b3;
+    color: #000;
     font-size: 1rem;
     font-weight: normal;
     transition: all 0.28s ease;

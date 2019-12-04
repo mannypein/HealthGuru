@@ -1,0 +1,139 @@
+@charset "ISO-8859-1";
+header {
+    background: #72d52a;
+    height: 60px;
+    margin: -7px;
+    border-radius: 2px;
+}
+.header1 {
+	position:absolute;
+    transition: .5s ease;
+    top: 15px;
+    left: 1125px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 4px 0 0;
+    padding: 7.5px;
+    background-color: #cbcbcb;
+    display: inline-block;
+}
+.header2 {
+	position:absolute;
+    transition: .5s ease;
+    top: 15px;
+    left: 1205px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 4px 0 0;
+    padding: 7.5px;
+    background-color: #cbcbcb;
+    display: inline-block;
+}
+.header3 {
+	position:absolute;
+    transition: .5s ease;
+    top: 15px;
+    left: 1300px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 4px 0 0;
+    padding: 7.5px;
+    background-color: #cbcbcb;
+    display: inline-block;
+}
+.healthy {
+	padding: 50px;
+	text-align: center;
+}
+.soup_img {
+	display: block;
+	Height: 375px;
+	width: 375px;
+}
+.omlette_pic {
+	display: block;
+	position: absolute;
+	transition: .5s ease;
+	top: 830px;
+	left: 550px;
+	Height: 375px;
+	width: 425px;
+}
+.spag_img{
+	disply: block;
+	position: absolute;
+	transition: .5s ease;
+	top: 830px;
+	left: 1100px;
+	Height: 375px;
+	width: 375px;
+}
+.picturebackground {
+	padding-top: 100px;
+	padding-bottom: 475px;
+	background: #339933;
+}
+.Healtyperson {
+	disply: block;
+	position: absolute;
+	transition: .5s ease;
+	left: 250px;
+	Height: 375px;
+	width: 375px;
+}
+.healthyquote {
+	disply: block;
+	position: absolute;
+	transition: .5s ease;
+	left: 375px;
+	top: 1700px;
+}
+.workoutspicture {
+	disply: block;
+	position: absolute;
+	transition: .5s ease;
+	left: 900px;
+	Height: 375px;
+	width: 375px;
+}
+.workout1{
+	disply: block;
+	position: absolute;
+	transition: .5s ease;
+	left: 1025px;
+	top: 1700px;
+}
+.workout2 {
+	disply: block;
+	position: absolute;
+	transition: .5s ease;
+	left: 1025px;
+	top: 1717px;
+}
+.picture1 {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  Height: 600px;
+  width: 900px;
+  box-shadow: 10px 10px grey;
+}
+.picture2 {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  Height: 600px;
+  width: 900px;
+  box-shadow: 10px 10px grey;
+}
+.picture3 {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  Height: 600px;
+  width: 900px;
+  box-shadow: 10px 10px grey;
+}
+img {
+  opacity: 0.8;
+}
