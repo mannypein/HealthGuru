@@ -5,9 +5,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.bson.Document;
 
@@ -17,6 +20,8 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
+@WebServlet("/login")
+@MultipartConfig
 public class loginController extends HttpServlet {
 	private Map<String, String> users = new HashMap<>();
 
@@ -35,30 +40,33 @@ public class loginController extends HttpServlet {
 		MongoDatabase database = mongoClient.getDatabase("HealthGuru");
 		MongoCollection<Document> collection = database.getCollection("HealthGuru");
 		FindIterable<Document> docs = collection.find();
-		
-		for(Document document : docs) {
+
+		for (Document document : docs) {
 			String username = (String) document.get("username");
 			String password = (String) document.get("password");
-			
-			users.put(username,password);
+
+			users.put(username, password);
 		}
 
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("login").forward(request, response);
+		request.getRequestDispatcher("Login.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		
-		if(password == users.get(username)) {
-			response.sendRedirect("home");
-		}else {
-			doGet(request,response);
+
+		HttpSession session = request.getSession(true);
+
+		request.setAttribute("username", username);
+		request.setAttribute("password", password);
+
+		if (password == users.get(username)) {
+			response.sendRedirect("/guru/userDetails");
 		}
 	}
 

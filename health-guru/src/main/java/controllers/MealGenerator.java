@@ -13,64 +13,67 @@ public class MealGenerator {
 	private int userID;
 	private List<String> dietaryRestrictions = new ArrayList<String>();
 	private String apiKey = "&apiKey=83ba08bd7814422383e8ba71074270ee";
-	
+
 	public static void main(String[] args) {
 		User u = new User();
 		List<Ingredient> ingredients = new ArrayList<>();
 		Ingredient i = new Ingredient();
 		i.setName("apple");
 		ingredients.add(i);
-		
+
 		MealGenerator mg = new MealGenerator();
 		String generate = mg.generateMeals(u, ingredients, 0);
 	}
-	
+
 	public String generateMeals(User user, List<Ingredient> ingredients, int maxCalories) {
-		//call the API to generate meal
+		// call the API to generate meal
 		String urlToGenerate = "https://api.spoonacular.com/recipes/complexSearch?includeIngredients=";
-		//Ingredients
-		for(Ingredient i : ingredients) {
-			if(i == ingredients.get(0)) {
-				urlToGenerate += ingredients.get(0).getName();
-				if(ingredients.size() > 1) {
-					urlToGenerate += ",";
+		// Ingredients
+		if (ingredients != null) {
+
+			for (Ingredient i : ingredients) {
+				if (i == ingredients.get(0)) {
+					urlToGenerate += ingredients.get(0).getName();
+					if (ingredients.size() > 1) {
+						urlToGenerate += ",";
+					}
+				} else {
+					urlToGenerate += "+" + i.toString() + ",";
 				}
-			} else {
-				urlToGenerate += "+" + i.toString() + ",";
 			}
 		}
-		
-		//Restrictions
-		if(dietaryRestrictions.size() > 0) {
+
+		// Restrictions
+		dietaryRestrictions = user.getFoodRestrictions();
+		if (dietaryRestrictions.size() > 0) {
 			urlToGenerate += "&excludeIngredients=";
-			for(String s : dietaryRestrictions) {
-				if(s.equals(dietaryRestrictions.get(0))) {
+			for (String s : dietaryRestrictions) {
+				if (s.equals(dietaryRestrictions.get(0))) {
 					urlToGenerate += dietaryRestrictions.get(0) + ",";
 				} else {
 					urlToGenerate += "+" + s + ",";
 				}
 			}
 		}
-		
-		//Diet
-		if(user.getDiet() != null ) {
+
+		// Diet
+		if (user.getDiet() != null) {
 			urlToGenerate += "&diet=" + user.getDiet().toString().toLowerCase();
 		}
-		
-		//Calories
-		if(maxCalories != 0) {
+
+		// Calories
+		if (maxCalories != 0) {
 			urlToGenerate += "&maxCalories=" + maxCalories;
 		}
-		
-		//Final String for call to API
-		urlToGenerate += apiKey;
-		
-		//Create and return list of meals
-		
-		
+
+		// Final String for call to API
+		urlToGenerate += "&" +apiKey;
+
+		// Create and return list of meals
+
 		return urlToGenerate;
 	}
-	
+
 	public Meal getMeal(String name) {
 		return meals.get(name);
 	}
@@ -90,7 +93,7 @@ public class MealGenerator {
 	public void setUserID(int userID) {
 		this.userID = userID;
 	}
-	
+
 	public void addDietaryRestriction(String restriction) {
 		dietaryRestrictions.add(restriction);
 	}

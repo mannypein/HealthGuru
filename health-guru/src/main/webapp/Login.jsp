@@ -8,12 +8,12 @@
 </head>
 <body>
 	<div class="container">
-        <form id='form' method='get' action='/create'>
+        <form id='form' method='POST' action='/guru/login'>
             <label for='username'> Username: </label>
-                <input type='text' name='username'/>
+                <input type='text' id='username'/>
                 <br/>
             <label for='password'> Password:</label>
-                <input type='password' name='password'/>
+                <input type='password' id='password'/>
                 <br/>
             <input type='submit' value='Login'></input>
             <input type='button' value='Create Account'>
