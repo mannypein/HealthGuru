@@ -12,6 +12,7 @@ public class UserProgressTracker {
 	public float trackProgress(float startingWeight, float weightGoal, float currentWeight) {
 		return 0;
 		
+		
 	}
 	
 	public User getUser() {

@@ -15,7 +15,7 @@ public class User {
 	private HashMap<String,Meal> favMeals = new HashMap<>();
 	private HashMap<String,WorkOut> favWorkOuts = new HashMap<>();
 	private BodyGoalType goal;
-	private List<String> foodRestrictions = new ArrayList<String>();
+	public List<String> foodRestrictions = new ArrayList<String>();
 	private float weightGoal;
 	private float startingWeight;
 	private float currentWeight;
@@ -98,6 +98,12 @@ public class User {
 	public void setDiet(Diet diet) {
 		this.diet = diet;
 	}
+	public List<String> getFoodRestrictions() {
+		return this.foodRestrictions;
+	}
 	
+	public void setFoodRestrictions(List<String> strings) {
+		this.foodRestrictions = strings;
+	}
 	
 }
