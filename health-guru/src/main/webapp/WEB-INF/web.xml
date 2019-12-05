@@ -28,12 +28,6 @@
   	<description></description>
   	<servlet-class>servlets.MealPageController</servlet-class>
   </servlet>
-  <servlet>
-  	<servlet-name>IngredientsController</servlet-name>
-  	<display-name>IngredientsController</display-name>
-  	<description></description>
-  	<servlet-class>servlets.IngredientsController</servlet-class>
-  </servlet>
   <servlet-mapping>
   	<servlet-name>SignUp</servlet-name>
   	<url-pattern>/SignUp</url-pattern>
@@ -49,9 +43,5 @@
   <servlet-mapping>
   	<servlet-name>MealPageController</servlet-name>
   	<url-pattern>/MealPageController</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-  	<servlet-name>IngredientsController</servlet-name>
-  	<url-pattern>/IngredientsController</url-pattern>
   </servlet-mapping>
 </web-app>
