@@ -8,19 +8,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import org.bson.Document;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
-import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-
-import models.User;
 
 @WebServlet("/signup")
 @MultipartConfig
@@ -29,7 +23,7 @@ public class userSignUpController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.getRequestDispatcher("Create.jsp").forward(request, response);;
+		request.getRequestDispatcher("create.html").forward(request, response);;
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -38,8 +32,6 @@ public class userSignUpController extends HttpServlet {
 		String password = request.getParameter("password");
 		String email = request.getParameter("email");
 
-		HttpSession session = request.getSession(true);		
-		
 		request.setAttribute("username", username);
 		request.setAttribute("password", password);
 
@@ -48,17 +40,33 @@ public class userSignUpController extends HttpServlet {
 
 		MongoClient mongoClient = new MongoClient(uri);
 		MongoDatabase database = mongoClient.getDatabase("HealthGuru");
-		MongoCollection<Document> collection = database.getCollection("Users");
-		Document doc = new Document("username",username)
-				.append("password", password)
-				.append("email", email);
-		collection.insertOne(doc);
-		response.sendRedirect("/guru/login");
+		DBCollection collection = (DBCollection) database.getCollection("Users");
+		BasicDBObject document = new BasicDBObject();
+		BasicDBObject searchQuery = new BasicDBObject();
+		searchQuery.put("username",username);
+		DBCursor cursor = collection.find(searchQuery);
+		
+		if(!cursor.hasNext()) {
+			long id = collection.count();
+			
+			document.put("username",username);
+			document.put("password",password);
+			document.put("userID",id);
+			document.put("email",email);
+			
+			
+			collection.insert(document);
+			
+			mongoClient.close();
+			
+			response.sendRedirect("login.html");
+		}else {
+//			response.get
 		}
 		
 		
 		
 		
-	
+	}
 
 }
